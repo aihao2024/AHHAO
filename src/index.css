@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Pinyon+Script&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cinzel", serif;
+  --font-body: "Cormorant Garamond", serif;
+  --font-script: "Pinyon Script", cursive;
+  
+  --color-parchment-50: #fdfbf7;
+  --color-parchment-100: #f7f3e8;
+  --color-parchment-200: #efe8d3;
+  --color-parchment-300: #e2d6b5;
+  --color-parchment-400: #d1bd8f;
+  --color-parchment-500: #c2a670;
+  
+  --color-ink-900: #1a1510;
+  --color-ink-800: #2c241b;
+  --color-ink-700: #4a3b2a;
+  
+  --color-magic-gold: #bfa15f;
+  --color-magic-red: #740001;
+}
+
+body {
+  background-color: var(--color-parchment-100);
+  color: var(--color-ink-900);
+  font-family: var(--font-body);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,0.4) 0%, transparent 60%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-parchment-200);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink-700);
+  border-radius: 5px;
+  border: 2px solid var(--color-parchment-200);
+}
+
+/* Magical Glow */
+.magic-glow {
+  text-shadow: 0 0 10px rgba(191, 161, 95, 0.3);
+}
+
+/* Paper Card Effect */
+.paper-card {
+  background-color: var(--color-parchment-50);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 0 20px rgba(194, 166, 112, 0.1);
+}
